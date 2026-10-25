@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+import { MobileBottomNav } from './components/MobileBottomNav';
 import { ScrollToTop } from './components/ScrollToTop';
 import { QuoteModal } from './components/QuoteModal';
 import { HomePage } from './pages/HomePage';
@@ -23,7 +24,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <div className="min-h-screen flex flex-col bg-white text-slate-900">
+      <div className="min-h-screen flex flex-col bg-white text-slate-900 pb-14 md:pb-0">
         <ScrollToTop />
         <Header onOpenQuoteModal={handleOpenQuoteModal} />
 
@@ -60,6 +61,9 @@ export default function App() {
         </main>
 
         <Footer onOpenQuoteModal={handleOpenQuoteModal} />
+
+        {/* Fixed Thumb-Zone Bottom Tab Bar for Mobile Devices */}
+        <MobileBottomNav onOpenQuoteModal={handleOpenQuoteModal} />
 
         <QuoteModal
           isOpen={quoteModalOpen}

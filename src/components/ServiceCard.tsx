@@ -29,7 +29,7 @@ export function ServiceCard({ service, onRequestQuote }: ServiceCardProps) {
   const IconComponent = ICON_MAP[service.iconName] || Camera;
 
   return (
-    <article className="group bg-white rounded-xl border border-slate-200 overflow-hidden shadow-xs hover:border-sky-500/60 transition-all duration-150 flex flex-col">
+    <article className="group bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:border-sky-500/60 transition-all duration-150 flex flex-col">
       {/* Service Visual Thumbnail */}
       <div className="relative aspect-[4/3] bg-slate-900 overflow-hidden border-b border-slate-200">
         <ResilientImage
@@ -41,24 +41,24 @@ export function ServiceCard({ service, onRequestQuote }: ServiceCardProps) {
       </div>
 
       {/* Card Body */}
-      <div className="p-6 flex-1 flex flex-col justify-between space-y-5">
-        <div className="space-y-2.5">
+      <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4 sm:space-y-5">
+        <div className="space-y-2">
           <div className="flex items-center justify-between text-xs text-slate-500 font-mono-tech">
             <span>{service.number}. Broadcast Service</span>
             <IconComponent className="w-4 h-4 text-sky-600" aria-hidden="true" />
           </div>
 
-          <h3 className="text-xl font-bold text-slate-900 group-hover:text-sky-600 transition-colors">
+          <h3 className="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-sky-600 transition-colors">
             {service.title}
           </h3>
 
           <p className="text-sm text-slate-600 leading-relaxed">{service.shortDescription}</p>
         </div>
 
-        <div className="pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
+        <div className="pt-3 border-t border-slate-100 flex items-center justify-between gap-3">
           <Link
             to={`/services#${service.slug}`}
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-sky-600 hover:text-sky-700 transition-colors whitespace-nowrap shrink-0"
+            className="min-h-[44px] inline-flex items-center gap-1.5 text-sm font-semibold text-sky-600 hover:text-sky-700 transition-colors whitespace-nowrap shrink-0"
           >
             <span>Learn More</span>
             <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -68,7 +68,7 @@ export function ServiceCard({ service, onRequestQuote }: ServiceCardProps) {
             <button
               type="button"
               onClick={() => onRequestQuote(service.title)}
-              className="text-xs font-medium text-slate-600 hover:text-slate-900 underline underline-offset-4 transition-colors whitespace-nowrap shrink-0"
+              className="min-h-[44px] px-3 inline-flex items-center text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 active:scale-95 rounded-xl transition-all whitespace-nowrap shrink-0"
             >
               Get a Quote
             </button>

@@ -117,17 +117,17 @@ export function HomePage({ onOpenQuoteModal }: HomePageProps) {
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-4 shrink-0">
+            <div className="grid grid-cols-1 sm:flex sm:flex-wrap items-center gap-3.5 sm:gap-4 shrink-0 w-full lg:w-auto">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center px-6 py-3.5 text-sm font-semibold text-slate-950 bg-white hover:bg-slate-100 rounded-lg transition-colors whitespace-nowrap shrink-0"
+                className="w-full sm:w-auto min-h-[48px] inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-slate-950 bg-white hover:bg-slate-100 active:scale-[0.99] rounded-xl transition-all whitespace-nowrap shrink-0"
               >
                 Get Started
               </Link>
               <button
                 type="button"
                 onClick={() => onOpenQuoteModal()}
-                className="inline-flex items-center justify-center px-6 py-3.5 text-sm font-semibold text-white bg-sky-600 hover:bg-sky-500 rounded-lg transition-colors whitespace-nowrap shrink-0"
+                className="w-full sm:w-auto min-h-[48px] inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-sky-600 hover:bg-sky-500 active:scale-[0.99] rounded-xl transition-all whitespace-nowrap shrink-0"
               >
                 Request a Quote
               </button>
