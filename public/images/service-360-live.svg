@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" fill="none">
+  <rect width="800" height="600" fill="#0B1120"/>
+  <!-- 360 Panoramic Globe Grid -->
+  <circle cx="400" cy="300" r="210" stroke="#0284C7" stroke-width="2.5" fill="#0F172A"/>
+  <ellipse cx="400" cy="300" rx="210" ry="75" stroke="#38BDF8" stroke-opacity="0.5" stroke-width="1.8"/>
+  <ellipse cx="400" cy="300" rx="210" ry="145" stroke="#38BDF8" stroke-opacity="0.3" stroke-width="1.5"/>
+  <ellipse cx="400" cy="300" rx="75" ry="210" stroke="#38BDF8" stroke-opacity="0.5" stroke-width="1.8"/>
+  <ellipse cx="400" cy="300" rx="145" ry="210" stroke="#38BDF8" stroke-opacity="0.3" stroke-width="1.5"/>
+  <!-- Center 360 Badge -->
+  <rect x="300" y="262" width="200" height="76" rx="12" fill="#090D16" stroke="#38BDF8" stroke-width="2.5"/>
+  <text x="336" y="302" fill="#FFFFFF" font-family="sans-serif" font-size="24" font-weight="800">360° LIVE</text>
+  <text x="330" y="324" fill="#38BDF8" font-family="monospace" font-size="12">EQUIRECTANGULAR VR</text>
+</svg>

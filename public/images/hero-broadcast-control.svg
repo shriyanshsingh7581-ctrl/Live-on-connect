@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#091326"/>
+    </linearGradient>
+    <linearGradient id="screenGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="stageGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0369A1" stop-opacity="0.1"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E293B" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Studio Background -->
+  <rect width="1600" height="900" fill="url(#bgGrad)"/>
+  <rect width="1600" height="900" fill="url(#grid)" opacity="0.5"/>
+
+  <!-- Ambient Studio Ceiling Lights -->
+  <ellipse cx="450" cy="80" rx="280" ry="90" fill="#0284C7" opacity="0.18"/>
+  <ellipse cx="1150" cy="80" rx="280" ry="90" fill="#38BDF8" opacity="0.14"/>
+
+  <!-- Multi-View Monitor Wall Frame -->
+  <rect x="110" y="90" width="1380" height="510" rx="16" fill="#0B1120" stroke="#334155" stroke-width="3"/>
+  <rect x="126" y="106" width="1348" height="478" rx="10" fill="#060A12" stroke="#1E293B" stroke-width="1.5"/>
+
+  <!-- Preview Monitor (Left Large) -->
+  <g transform="translate(148, 126)">
+    <rect width="635" height="310" rx="8" fill="#0F172A" stroke="#334155" stroke-width="2"/>
+    <rect x="12" y="12" width="611" height="256" rx="4" fill="url(#screenGlow)"/>
+    <!-- Stage Scene Inside Preview -->
+    <path d="M80 245 L555 245 L600 268 L35 268 Z" fill="#1E293B"/>
+    <ellipse cx="317" cy="150" rx="160" ry="70" fill="url(#stageGlow)"/>
+    <!-- Speaker Podium & Figures -->
+    <rect x="295" y="165" width="44" height="80" rx="4" fill="#334155"/>
+    <circle cx="317" cy="135" r="18" fill="#94A3B8"/>
+    <path d="M289 168 C289 152 345 152 345 168 Z" fill="#CBD5E1"/>
+    <!-- Rule of Thirds Grid -->
+    <line x1="215" y1="12" x2="215" y2="268" stroke="#38BDF8" stroke-opacity="0.2" stroke-dasharray="4 4"/>
+    <line x1="420" y1="12" x2="420" y2="268" stroke="#38BDF8" stroke-opacity="0.2" stroke-dasharray="4 4"/>
+    <line x1="12" y1="98" x2="623" y2="98" stroke="#38BDF8" stroke-opacity="0.2" stroke-dasharray="4 4"/>
+    <line x1="12" y1="182" x2="623" y2="182" stroke="#38BDF8" stroke-opacity="0.2" stroke-dasharray="4 4"/>
+    <!-- Preview Status Bar -->
+    <rect x="24" y="24" width="96" height="26" rx="4" fill="#0F172A" fill-opacity="0.85" stroke="#10B981" stroke-width="1.5"/>
+    <text x="42" y="42" fill="#10B981" font-family="monospace" font-size="13" font-weight="700">PVW CAM 02</text>
+    <text x="500" y="294" fill="#94A3B8" font-family="monospace" font-size="13">1080p60 · SDI-A</text>
+    <text x="24" y="294" fill="#E2E8F0" font-family="sans-serif" font-size="14" font-weight="600">WIDE STAGE KEYNOTE</text>
+  </g>
+
+  <!-- Program Monitor (Right Large) -->
+  <g transform="translate(815, 126)">
+    <rect width="635" height="310" rx="8" fill="#0F172A" stroke="#0284C7" stroke-width="2.5"/>
+    <rect x="12" y="12" width="611" height="256" rx="4" fill="url(#screenGlow)"/>
+    <!-- Close-up Broadcast Frame -->
+    <rect x="60" y="40" width="515" height="190" rx="6" fill="#0B1528" stroke="#1E293B"/>
+    <circle cx="318" cy="112" r="36" fill="#E2E8F0"/>
+    <path d="M252 212 C252 162 384 162 384 212 Z" fill="#0284C7"/>
+    <!-- Lower Third Broadcast Graphic Overlay -->
+    <rect x="85" y="186" width="360" height="36" rx="4" fill="#0F172A" fill-opacity="0.92" stroke="#38BDF8" stroke-width="1.5"/>
+    <rect x="85" y="186" width="8" height="36" fill="#0284C7"/>
+    <text x="106" y="203" fill="#F8FAFC" font-family="sans-serif" font-size="12" font-weight="700">MAIN AUDITORIUM FEED</text>
+    <text x="106" y="216" fill="#38BDF8" font-family="monospace" font-size="10">MULTI-CAMERA SWITCHED OUTPUT</text>
+    <!-- Program Status Bar -->
+    <rect x="24" y="24" width="102" height="26" rx="4" fill="#0284C7"/>
+    <text x="38" y="42" fill="#FFFFFF" font-family="monospace" font-size="13" font-weight="700">PGM CAM 01</text>
+    <text x="485" y="294" fill="#38BDF8" font-family="monospace" font-size="13">TC 01:14:28:19</text>
+    <text x="24" y="294" fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="600">PROGRAM MASTER OUT</text>
+  </g>
+
+  <!-- 4 Auxiliary Camera & Telemetry Sub-Monitors -->
+  <g transform="translate(148, 452)">
+    <!-- CAM 3 -->
+    <rect x="0" y="0" width="310" height="114" rx="6" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+    <rect x="10" y="10" width="150" height="94" rx="4" fill="#1E293B"/>
+    <path d="M35 80 L85 40 L135 80 Z" fill="#334155"/>
+    <text x="174" y="34" fill="#E2E8F0" font-family="sans-serif" font-size="13" font-weight="700">CAM 03 · JIB ARM</text>
+    <text x="174" y="56" fill="#94A3B8" font-family="monospace" font-size="12">WIRELESS 5GHz</text>
+    <text x="174" y="78" fill="#38BDF8" font-family="monospace" font-size="12">SIGNAL: 98%</text>
+    <text x="174" y="96" fill="#64748B" font-family="monospace" font-size="11">ISO 800 · f/2.8</text>
+
+    <!-- CAM 4 -->
+    <rect x="330" y="0" width="310" height="114" rx="6" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+    <rect x="340" y="10" width="150" height="94" rx="4" fill="#1E293B"/>
+    <circle cx="415" cy="57" r="26" stroke="#38BDF8" stroke-width="2" fill="none"/>
+    <circle cx="415" cy="57" r="8" fill="#38BDF8"/>
+    <text x="504" y="34" fill="#E2E8F0" font-family="sans-serif" font-size="13" font-weight="700">CAM 04 · 360 RIG</text>
+    <text x="504" y="56" fill="#94A3B8" font-family="monospace" font-size="12">PANORAMIC 4K</text>
+    <text x="504" y="78" fill="#38BDF8" font-family="monospace" font-size="12">STITCH: ACTIVE</text>
+    <text x="504" y="96" fill="#64748B" font-family="monospace" font-size="11">60 FPS LOCK</text>
+
+    <!-- WAVEFORM / VECTORSCOPE -->
+    <rect x="665" y="0" width="310" height="114" rx="6" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+    <polyline points="685,85 710,45 735,70 760,30 785,65 810,35 835,75 860,40 885,60 910,38 935,72 955,50" fill="none" stroke="#38BDF8" stroke-width="2.5"/>
+    <line x1="680" y1="25" x2="960" y2="25" stroke="#1E293B" stroke-width="1"/>
+    <line x1="680" y1="57" x2="960" y2="57" stroke="#1E293B" stroke-width="1"/>
+    <line x1="680" y1="89" x2="960" y2="89" stroke="#1E293B" stroke-width="1"/>
+    <text x="685" y="104" fill="#94A3B8" font-family="monospace" font-size="11">LUMA WAVEFORM · REC.709</text>
+
+    <!-- AUDIO MASTER METERS -->
+    <rect x="995" y="0" width="307" height="114" rx="6" fill="#0F172A" stroke="#1E293B" stroke-width="1.5"/>
+    <rect x="1018" y="22" width="16" height="72" rx="3" fill="#1E293B"/>
+    <rect x="1018" y="38" width="16" height="56" rx="3" fill="#10B981"/>
+    <rect x="1044" y="22" width="16" height="72" rx="3" fill="#1E293B"/>
+    <rect x="1044" y="32" width="16" height="62" rx="3" fill="#10B981"/>
+    <rect x="1070" y="22" width="16" height="72" rx="3" fill="#1E293B"/>
+    <rect x="1070" y="48" width="16" height="46" rx="3" fill="#38BDF8"/>
+    <rect x="1096" y="22" width="16" height="72" rx="3" fill="#1E293B"/>
+    <rect x="1096" y="45" width="16" height="49" rx="3" fill="#38BDF8"/>
+    <text x="1132" y="38" fill="#E2E8F0" font-family="sans-serif" font-size="13" font-weight="700">AUDIO MATRIX</text>
+    <text x="1132" y="58" fill="#10B981" font-family="monospace" font-size="12">PGM L/R: -14 LUFS</text>
+    <text x="1132" y="78" fill="#94A3B8" font-family="monospace" font-size="12">48kHz PCM</text>
+    <text x="1132" y="96" fill="#38BDF8" font-family="monospace" font-size="11">ENCODER READY</text>
+  </g>
+
+  <!-- Broadcast Production Switcher Desk -->
+  <path d="M40 640 L1560 640 L1600 900 L0 900 Z" fill="#0B1120" stroke="#1E293B" stroke-width="2"/>
+  <rect x="260" y="670" width="1080" height="190" rx="14" fill="#111827" stroke="#334155" stroke-width="2.5"/>
+
+  <!-- Crosspoint Switcher Buttons Row 1 (Program Bus) -->
+  <g transform="translate(300, 700)">
+    <rect x="0" y="0" width="54" height="36" rx="5" fill="#0284C7" stroke="#38BDF8" stroke-width="2"/>
+    <rect x="68" y="0" width="54" height="36" rx="5" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+    <rect x="136" y="0" width="54" height="36" rx="5" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+    <rect x="204" y="0" width="54" height="36" rx="5" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+    <rect x="272" y="0" width="54" height="36" rx="5" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+    <rect x="340" y="0" width="54" height="36" rx="5" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+    <rect x="408" y="0" width="54" height="36" rx="5" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+    <rect x="476" y="0" width="54" height="36" rx="5" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+  </g>
+
+  <!-- Crosspoint Switcher Buttons Row 2 (Preview Bus) -->
+  <g transform="translate(300, 756)">
+    <rect x="0" y="0" width="54" height="36" rx="5" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+    <rect x="68" y="0" width="54" height="36" rx="5" fill="#065F46" stroke="#10B981" stroke-width="2"/>
+    <rect x="136" y="0" width="54" height="36" rx="5" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+    <rect x="204" y="0" width="54" height="36" rx="5" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+    <rect x="272" y="0" width="54" height="36" rx="5" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+    <rect x="340" y="0" width="54" height="36" rx="5" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+    <rect x="408" y="0" width="54" height="36" rx="5" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+    <rect x="476" y="0" width="54" height="36" rx="5" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+  </g>
+
+  <!-- T-Bar Transition Fader & PTZ Joystick -->
+  <g transform="translate(920, 695)">
+    <rect x="0" y="0" width="110" height="135" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+    <rect x="48" y="18" width="14" height="98" rx="4" fill="#1E293B"/>
+    <rect x="22" y="42" width="66" height="22" rx="5" fill="#0284C7" stroke="#38BDF8" stroke-width="1.5"/>
+
+    <!-- PTZ Camera Control Module -->
+    <rect x="145" y="0" width="230" height="135" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+    <circle cx="215" cy="68" r="38" fill="#1E293B" stroke="#475569" stroke-width="2"/>
+    <circle cx="215" cy="68" r="16" fill="#0284C7"/>
+    <rect x="280" y="25" width="70" height="32" rx="4" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+    <text x="296" y="46" fill="#38BDF8" font-family="monospace" font-size="13" font-weight="700">CUT</text>
+    <rect x="280" y="75" width="70" height="32" rx="4" fill="#0284C7"/>
+    <text x="294" y="96" fill="#FFFFFF" font-family="monospace" font-size="13" font-weight="700">AUTO</text>
+  </g>
+</svg>
